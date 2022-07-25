@@ -27,9 +27,13 @@ public class JanelaAdicionarLancamento extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         lblTituloAdicionarLancamento = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         lblTituloAdicionarLancamento.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblTituloAdicionarLancamento.setText("Dados do Lançamento");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setText("Foguete:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -38,12 +42,18 @@ public class JanelaAdicionarLancamento extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(lblTituloAdicionarLancamento)
                 .addGap(0, 139, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(lblTituloAdicionarLancamento)
-                .addGap(0, 242, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addGap(0, 216, Short.MAX_VALUE))
         );
 
         pack();
@@ -51,6 +61,7 @@ public class JanelaAdicionarLancamento extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblTituloAdicionarLancamento;
     // End of variables declaration//GEN-END:variables
 }

@@ -35,9 +35,7 @@ public class BDFoguete implements IFoguete{
             String strSQL = "insert into foguete (nomeFoguete, inicioConstrucao, terminoConstrucao, missaoFoguete) ";
             strSQL += " values (?, ?, ?, ?);";
             System.out.println(strSQL);
-            preparedStatement = 
-                    conexaoBanco.getConexao().prepareStatement(strSQL);
-            
+            preparedStatement = conexaoBanco.getConexao().prepareStatement(strSQL);
             preparedStatement.setString(1, foguete.getNomeFoguete());
             preparedStatement.setString(2, foguete.getInicioConstrucao());
             preparedStatement.setString(3, foguete.getTerminoConstrucao());

@@ -4,10 +4,17 @@
  */
 package interfacedados;
 
+import java.util.ArrayList;
+import modelo.Lancamento;
+
 /**
  *
  * @author N&N
  */
 public interface ILancamento {
+    public abstract boolean adicionarLancamento(Lancamento lancamento);
     
+    public abstract ArrayList<Lancamento> consultarLancamentos();
+    
+    public String getMensagem();
 }

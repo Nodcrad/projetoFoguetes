@@ -19,9 +19,13 @@ public class JanelaAdicionarFoguete extends javax.swing.JInternalFrame {
     private String os30[] = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30" };
     private String os31[] = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" };
 
+        //Por algum motivo, usar o mesmo modelo nas duas comboBoxMes ao mesmo tempo, buga a duas comboBoxDia;
         private DefaultComboBoxModel dias28 = new DefaultComboBoxModel(os28);
+        private DefaultComboBoxModel dias28B = new DefaultComboBoxModel(os28);
         private DefaultComboBoxModel dias30 = new DefaultComboBoxModel(os30);
+        private DefaultComboBoxModel dias30B = new DefaultComboBoxModel(os30);
         private DefaultComboBoxModel dias31 = new DefaultComboBoxModel(os31);
+        private DefaultComboBoxModel dias31B = new DefaultComboBoxModel(os31);
     /**
      * Creates new form JanelaAdicionarFoguete
      */
@@ -294,7 +298,7 @@ public class JanelaAdicionarFoguete extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_cmbDia1ActionPerformed
 
     private void cmbMes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbMes1ActionPerformed
-        int marcador = cmbDia1.getSelectedIndex();
+        int marcador1 = cmbDia1.getSelectedIndex();
         if(cmbMes1.getSelectedIndex()== 1){
             cmbDia1.setModel(dias28);
         }
@@ -313,7 +317,7 @@ public class JanelaAdicionarFoguete extends javax.swing.JInternalFrame {
                 cmbMes1.getSelectedIndex() == 10){
             cmbDia1.setModel(dias30);
         }
-        cmbDia1.setSelectedIndex(marcador);
+        cmbDia1.setSelectedIndex(marcador1);
     }//GEN-LAST:event_cmbMes1ActionPerformed
 
     private void cmbAno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbAno1ActionPerformed
@@ -329,9 +333,9 @@ public class JanelaAdicionarFoguete extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_cmbAno2ActionPerformed
 
     private void cmbMes2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbMes2ActionPerformed
-        int marcador = cmbDia2.getSelectedIndex();
+        int marcador2 = cmbDia2.getSelectedIndex();
         if(cmbMes2.getSelectedIndex()== 1){
-            cmbDia2.setModel(dias28);
+            cmbDia2.setModel(dias28B);
         }
         if(cmbMes2.getSelectedIndex() == 0 || 
                 cmbMes2.getSelectedIndex() == 2 || 
@@ -340,15 +344,15 @@ public class JanelaAdicionarFoguete extends javax.swing.JInternalFrame {
                 cmbMes2.getSelectedIndex() == 7 || 
                 cmbMes2.getSelectedIndex() == 9 || 
                 cmbMes2.getSelectedIndex() == 11 ){
-            cmbDia2.setModel(dias31);
+            cmbDia2.setModel(dias31B);
         }
         if(cmbMes2.getSelectedIndex() == 3 || 
                 cmbMes2.getSelectedIndex() == 5 || 
                 cmbMes2.getSelectedIndex() == 8 || 
                 cmbMes2.getSelectedIndex() == 10){
-            cmbDia2.setModel(dias30);
+            cmbDia2.setModel(dias30B);
         }
-        cmbDia2.setSelectedIndex(marcador);
+        cmbDia2.setSelectedIndex(marcador2);
     }//GEN-LAST:event_cmbMes2ActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed

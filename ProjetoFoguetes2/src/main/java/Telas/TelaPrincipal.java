@@ -4,7 +4,7 @@
  */
 package Telas;
 
-import Telas.JanelaLogin;
+
 
 /**
  *
@@ -30,12 +30,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        itemConsultarLancamentos = new javax.swing.JMenuItem();
+        itemLancamento = new javax.swing.JMenuItem();
         painelDesktop = new javax.swing.JPanel();
         barramenu = new javax.swing.JMenuBar();
         menuAdicionar = new javax.swing.JMenu();
         itemFoguete = new javax.swing.JMenuItem();
-        itemLancamento = new javax.swing.JMenuItem();
         menuConsultar = new javax.swing.JMenu();
+        itemConsultarFoguetes = new javax.swing.JMenuItem();
+
+        itemConsultarLancamentos.setText("Lançamentos");
+
+        itemLancamento.setText("Lançamento");
+        itemLancamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemLancamentoActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -65,17 +76,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         menuAdicionar.add(itemFoguete);
 
-        itemLancamento.setText("Lançamento");
-        itemLancamento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemLancamentoActionPerformed(evt);
-            }
-        });
-        menuAdicionar.add(itemLancamento);
-
         barramenu.add(menuAdicionar);
 
-        menuConsultar.setText("Consultar");
+        menuConsultar.setText("Acessar");
+
+        itemConsultarFoguetes.setText("Foguetes");
+        itemConsultarFoguetes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemConsultarFoguetesActionPerformed(evt);
+            }
+        });
+        menuConsultar.add(itemConsultarFoguetes);
+
         barramenu.add(menuConsultar);
 
         setJMenuBar(barramenu);
@@ -102,12 +114,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void itemFogueteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemFogueteActionPerformed
-        // TODO add your handling code here:
+        JanelaAdicionarFoguete jaf = new JanelaAdicionarFoguete();
+        painelDesktop.add(jaf);
+        jaf.setVisible(true);
     }//GEN-LAST:event_itemFogueteActionPerformed
 
     private void itemLancamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemLancamentoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_itemLancamentoActionPerformed
+
+    private void itemConsultarFoguetesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemConsultarFoguetesActionPerformed
+        JanelaAcessarFoguetes jafo = new JanelaAcessarFoguetes();
+        painelDesktop.add(jafo);
+        jafo.setVisible(true);
+    }//GEN-LAST:event_itemConsultarFoguetesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,6 +166,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar barramenu;
+    private javax.swing.JMenuItem itemConsultarFoguetes;
+    private javax.swing.JMenuItem itemConsultarLancamentos;
     private javax.swing.JMenuItem itemFoguete;
     private javax.swing.JMenuItem itemLancamento;
     private javax.swing.JMenu menuAdicionar;

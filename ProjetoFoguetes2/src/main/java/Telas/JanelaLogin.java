@@ -97,6 +97,11 @@ public class JanelaLogin extends javax.swing.JInternalFrame {
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -143,6 +148,10 @@ public class JanelaLogin extends javax.swing.JInternalFrame {
             this.dispose();
         }
     }//GEN-LAST:event_btnConfirmarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
